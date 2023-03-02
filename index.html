@@ -4,41 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson 22</title>
+  <title>Lesson 23</title>
 </head>
 <body>
   <script>
-    let number_1, number_2;
-    number_1 = prompt('Введіть перше число:');
-    if (number_1 !== "" && !isNaN(number_1)) {
-      number_2 = prompt('Введіть друге число:');
+    const array = ['sdfsdf', 65, false, 'A', 98, true, 41, null, 97, undefined];
+    const arrayNumbers = [];
+    for (let i = 0; i < array.length; i++) {
+      if (typeof array[i] === "number") {
+        arrayNumbers.push(array[i]);
+      }
     }
-    if (number_1 == "" || number_2 == "" || isNaN(number_1) || isNaN(number_2)) {
-      alert('Ви не ввели число');
+    let sum = 0;
+    let min = arrayNumbers[0];
+    let max = arrayNumbers[0];
+    for (let i = 0; i < arrayNumbers.length; i++) {
+      sum += arrayNumbers[i];
+      if (min > arrayNumbers[i+1]) {
+        min = arrayNumbers[i+1];
+      }
+      if (max < arrayNumbers[i+1]) {
+        max = arrayNumbers[i+1];
+      }
     }
-    if (number_1 !== "" && number_2 !== "" && !isNaN(number_1) && !isNaN(number_2)) {
-      number_1 = Number(number_1);
-      number_2 = Number(number_2);
-      const sum = number_1 + number_2;
-      const diff = number_1 - number_2;
-      const prod = number_1 * number_2;
-      const div = (number_1 / number_2).toFixed(2);
-      alert(`Сума: ` + sum);
-      if (number_1 >= number_2) {
-        alert(`Різниця: ` + diff)
-      }
-      if (number_1 < number_2) {
-        let question = confirm('Ви впевнені, що хочете продовжити операцію?');
-        if (question) {
-          alert(`Різниця: ` + diff)
-        }
-      }
-      alert(`Добуток: ` + prod);
-      if (number_2 === 0) {
-        alert('На нуль ділити не можна')
-      } else {
-        alert(`Ділення: ` + div)
-      }
+    console.log('Масив: ' + array);
+    console.log('Масив чисел: ' + arrayNumbers);
+    console.log('Сума чисел: ' + sum);
+    console.log('Мінімальне значення: ' + min);
+    console.log('Максимальне значення: ' + max);
+
+    let a = '';
+    for (let i = 0; i < 5; i++) {
+      a += '#';
+      console.log(a);
     }
   </script>
 </body>
