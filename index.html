@@ -4,93 +4,54 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson 24</title>
+  <title>Lesson 25</title>
 </head>
 <body>
   <script>
 
-    function sum(number_1, number_2) {
-      if (number_1 !== "" && number_2 !== "" && !isNaN(number_1) && !isNaN(number_2)) {
-        alert(`Сума: ` + (Number(number_1) + Number(number_2)));
-      } else {
-        alert('Ви не ввели число');
-      }
+    const car = {
+      brand: "Toyota",
+      model: "Prius",
+      color: "Blue",
+      year: 2022
+    };
+
+    function isObjectEmpty(obj) {
+      return Object.keys(obj).length === 0 ? "Об'єкт порожній" : "Об'єкт не порожній"
     }
 
-    function diff(number_1, number_2) {
-      if (number_1 !== "" && number_2 !== "" && !isNaN(number_1) && !isNaN(number_2)) {
-        number_1 = Number(number_1);
-        number_2 = Number(number_2);
-        const diff = number_1 - number_2;
-        if (number_1 >= number_2) {
-          alert(`Різниця: ` + diff)
-        }
-        if (number_1 < number_2) {
-          let question = confirm('Ви впевнені, що хочете продовжити операцію?');
-          if (question) {
-            alert(`Різниця: ` + diff)
-          }
-        }
+    alert(isObjectEmpty(car));
+
+    const user = {
+      name: 'Сергій',
+      age: 32,
+      sayHello() {
+        alert(`Привіт, я ${this.name}, мені ${this.age} роки!`)
       }
     }
+    user.sayHello();
 
-    function mul(number_1, number_2) {
-      if (number_1 !== "" && number_2 !== "" && !isNaN(number_1) && !isNaN(number_2)) {
-        alert(`Добуток: ` + (Number(number_1) * Number(number_2)));
-      }
-    }
-
-    function div(number_1, number_2) {
-      if (number_1 !== "" && number_2 !== "" && !isNaN(number_1) && !isNaN(number_2)) {
-        if (number_2 == 0) {
-          alert('На нуль ділити не можна')
+    const calc = {
+      ask() {
+        this.value_1 = prompt('Введіть перше число:');
+        this.value_2 = prompt('Введіть друге число:')
+      },
+      sum() {
+        if (this.value_1 !== "" && this.value_2 !== "" && !isNaN(this.value_1) && !isNaN(this.value_2)) {
+          alert('Сума: ' + (Number(this.value_1) + Number(this.value_2)))
         } else {
-          alert(`Ділення: ` + (Number(number_1) / Number(number_2)).toFixed(2));
+          alert('Ви не ввели число')
+        }
+      },
+      mul() {
+        if (this.value_1 !== "" && this.value_2 !== "" && !isNaN(this.value_1) && !isNaN(this.value_2)) {
+          alert('Добуток: ' + (Number(this.value_1) * Number(this.value_2)))
         }
       }
     }
-
-    let number_1, number_2;
-    number_1 = prompt('Введіть перше число:');
-    number_2 = prompt('Введіть друге число:');
-
-    sum(number_1, number_2);
-    diff(number_1, number_2);
-    mul(number_1, number_2);
-    div(number_1, number_2);
-
-
-    const array = ['s', 65, false, 'A', 98, true, 41, null, 97, undefined];
-    const arrayNumbers = [];
-    for (let i = 0; i < array.length; i++) {
-      if (typeof array[i] === "number") {
-        arrayNumbers.push(array[i]);
-      }
-    }
-
-    function min(arrayNumbers) {
-      let min = arrayNumbers[0];
-      for (let i = 0; i < arrayNumbers.length; i++) {
-        if (min > arrayNumbers[i+1]) {
-          min = arrayNumbers[i+1];
-        }
-      }
-      return min
-    }
-
-    function max(arrayNumbers) {
-      let max = arrayNumbers[0];
-      let i = 0;
-      while (i < arrayNumbers.length) {
-        if (max < arrayNumbers[i+1]) {
-          max = arrayNumbers[i+1];
-        }
-        i++;
-      }
-      return max
-    }
-
-    alert('Масив: ' + array + '\nМінімальне значення: ' + min(arrayNumbers) + '\nМаксимальне значення: ' + max(arrayNumbers));
+    calc.ask();
+    calc.sum();
+    calc.mul();
 
   </script>
 </body>
