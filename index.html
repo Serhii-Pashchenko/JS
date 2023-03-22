@@ -4,54 +4,63 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson 25</title>
+  <title>Lesson 26</title>
 </head>
 <body>
   <script>
 
-    const car = {
-      brand: "Toyota",
-      model: "Prius",
-      color: "Blue",
-      year: 2022
+    function Accumulator(initialValue) {
+      this.value = initialValue;
+    }
+
+    Accumulator.prototype.increment = function () {
+      this.value += 1;
+      alert(`Інкремент: ${this.value}`);
     };
 
-    function isObjectEmpty(obj) {
-      return Object.keys(obj).length === 0 ? "Об'єкт порожній" : "Об'єкт не порожній"
+    Accumulator.prototype.decrement = function () {
+      this.value -= 1;
+      alert(`Декремент: ${this.value}`);
     }
 
-    alert(isObjectEmpty(car));
-
-    const user = {
-      name: 'Сергій',
-      age: 32,
-      sayHello() {
-        alert(`Привіт, я ${this.name}, мені ${this.age} роки!`)
-      }
+    function CancelableAccumulator(initialValue2) {
+      Accumulator.call(this, initialValue2);
     }
-    user.sayHello();
 
-    const calc = {
-      ask() {
-        this.value_1 = prompt('Введіть перше число:');
-        this.value_2 = prompt('Введіть друге число:')
-      },
-      sum() {
-        if (this.value_1 !== "" && this.value_2 !== "" && !isNaN(this.value_1) && !isNaN(this.value_2)) {
-          alert('Сума: ' + (Number(this.value_1) + Number(this.value_2)))
-        } else {
-          alert('Ви не ввели число')
-        }
-      },
-      mul() {
-        if (this.value_1 !== "" && this.value_2 !== "" && !isNaN(this.value_1) && !isNaN(this.value_2)) {
-          alert('Добуток: ' + (Number(this.value_1) * Number(this.value_2)))
-        }
-      }
+    CancelableAccumulator.prototype = Object.create(Accumulator.prototype);
+    
+    CancelableAccumulator.prototype.clear = function () {
+      this.value = initialValue2;
+      alert(`Повернення другого початкового значення: ${this.value}`);
+    };
+
+    let initialValue = prompt('Введіть перше початкове значення:');
+    let initialValue2 = prompt('Введіть друге початкове значення:');
+
+    if (initialValue == "" || isNaN(initialValue) || initialValue2 == "" || isNaN(initialValue2)) {
+      alert('Ви не ввели число!');
+    } else {
+      initialValue = Number(initialValue);
+      initialValue2 = Number(initialValue2);
+
+      let acc = new Accumulator(initialValue);
+      let acc2 = new CancelableAccumulator(initialValue2);
+
+      acc.increment();
+      acc.increment();
+      acc.increment();
+      acc.increment();
+      acc.decrement();
+      acc.decrement();
+
+      acc2.increment();
+      acc2.increment();
+      acc2.increment();
+      acc2.increment();
+      acc2.decrement();
+      acc2.decrement();
+      acc2.clear();
     }
-    calc.ask();
-    calc.sum();
-    calc.mul();
 
   </script>
 </body>
