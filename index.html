@@ -4,62 +4,115 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson 26</title>
+  <title>Lesson 27</title>
 </head>
 <body>
+
+  <h2 id="numbersID"></h2>
+  <ul id="resultsID"></ul>
+  <h2 id="arrayID">Масив чисел: [ </h2>
+
   <script>
 
-    function Accumulator(initialValue) {
-      this.value = initialValue;
+    const res = document.getElementById('resultsID');
+    const arrayID = document.getElementById('arrayID');
+
+    function sum(number_1, number_2) {
+      if (number_1 !== "" && number_2 !== "" && !isNaN(number_1) && !isNaN(number_2)) {
+        const numb = document.getElementById('numbersID');
+        numb.textContent = `Введені числа ${number_1} і ${number_2}:`;
+        const li = document.createElement('li');
+        li.textContent = 'Сума: ' + (Number(number_1) + Number(number_2));
+        res.appendChild(li);
+      } else {
+        alert('Ви не ввели число');
+      }
     }
 
-    Accumulator.prototype.increment = function () {
-      this.value += 1;
-      alert(`Інкремент: ${this.value}`);
-    };
-
-    Accumulator.prototype.decrement = function () {
-      this.value -= 1;
-      alert(`Декремент: ${this.value}`);
+    function diff(number_1, number_2) {
+      if (number_1 !== "" && number_2 !== "" && !isNaN(number_1) && !isNaN(number_2)) {
+        number_1 = Number(number_1);
+        number_2 = Number(number_2);
+        const diff = number_1 - number_2;
+        const li = document.createElement('li');
+        li.setAttribute('id', 'diff');
+        li.textContent = 'Різниця: ' + diff;
+        res.appendChild(li);
+        const li_diff = document.getElementById('diff');
+        if (number_1 >= number_2) {
+          li_diff.style.color = 'green';
+        } else {
+          li_diff.style.color = 'red';
+        }
+      }
     }
 
-    function CancelableAccumulator(initialValue2) {
-      Accumulator.call(this, initialValue2);
+    function mul(number_1, number_2) {
+      if (number_1 !== "" && number_2 !== "" && !isNaN(number_1) && !isNaN(number_2)) {
+        const li = document.createElement('li');
+        li.textContent = 'Добуток: ' + (Number(number_1) * Number(number_2));
+        res.appendChild(li);
+      }
     }
 
-    CancelableAccumulator.prototype = Object.create(Accumulator.prototype);
-    
-    CancelableAccumulator.prototype.clear = function () {
-      this.value = initialValue2;
-      alert(`Повернення другого початкового значення: ${this.value}`);
-    };
+    function div(number_1, number_2) {
+      if (number_1 !== "" && number_2 !== "" && !isNaN(number_1) && !isNaN(number_2)) {
+        if (number_2 == 0) {
+          alert('На нуль ділити не можна')
+        } else {
+          const li = document.createElement('li');
+          li.textContent = 'Ділення: ' + (Number(number_1) / Number(number_2)).toFixed(2);
+          res.appendChild(li);
+        }
+      }
+    }
 
-    let initialValue = prompt('Введіть перше початкове значення:');
-    let initialValue2 = prompt('Введіть друге початкове значення:');
+    let number_1, number_2;
+    number_1 = prompt('Введіть перше число:');
+    number_2 = prompt('Введіть друге число:');
 
-    if (initialValue == "" || isNaN(initialValue) || initialValue2 == "" || isNaN(initialValue2)) {
-      alert('Ви не ввели число!');
-    } else {
-      initialValue = Number(initialValue);
-      initialValue2 = Number(initialValue2);
+    sum(number_1, number_2);
+    diff(number_1, number_2);
+    mul(number_1, number_2);
+    div(number_1, number_2);
 
-      let acc = new Accumulator(initialValue);
-      let acc2 = new CancelableAccumulator(initialValue2);
 
-      acc.increment();
-      acc.increment();
-      acc.increment();
-      acc.increment();
-      acc.decrement();
-      acc.decrement();
+    const array = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5];
 
-      acc2.increment();
-      acc2.increment();
-      acc2.increment();
-      acc2.increment();
-      acc2.decrement();
-      acc2.decrement();
-      acc2.clear();
+    const arrayNumbers = [];
+    for (let i = 0; i < array.length; i++) {
+      if (typeof array[i] === "number") {
+        arrayNumbers.push(array[i]);
+      }
+    }
+
+    let color = 40;
+    function min(arrayNumbers) {
+      let min = arrayNumbers[0];
+      for (let i = 0; i < arrayNumbers.length; i++) {
+        if (min > arrayNumbers[i+1]) {
+          min = arrayNumbers[i+1];
+        }
+      }
+      const span = document.createElement('span');
+      if (arrayNumbers.length > 1) {
+        span.textContent = `${min}, `;
+      } else {
+        span.textContent = min;
+      }
+      arrayID.appendChild(span);
+      color += 20;
+      span.style.color = `rgb(0, ${color}, 0)`;
+      arrayNumbers.splice(arrayNumbers.indexOf(min), 1);
+      if (arrayNumbers.length === 0) {
+        const span = document.createElement('span');
+        span.textContent = ` ]`;
+        arrayID.appendChild(span);
+      }
+    }
+
+    while (arrayNumbers.length > 0 ) {
+      min(arrayNumbers);
     }
 
   </script>
