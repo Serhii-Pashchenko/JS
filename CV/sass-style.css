@@ -1,0 +1,542 @@
+.main-theme .sidebar {
+  background-color: #86A3B4;
+}
+.main-theme .name {
+  color: #1C2E8C;
+  margin: 0 0 35px 40px;
+}
+.main-theme .photo {
+  margin: 35px 0 50px 0;
+}
+.main-theme .sidebar .title {
+  color: #263036;
+  border-bottom: 6px solid #263036;
+}
+.main-theme .contacts {
+  margin-left: 40px;
+}
+.main-theme .sidebar-title {
+  color: #fff;
+}
+.main-theme .contact-title {
+  color: #263036;
+  margin-top: 35px;
+}
+.main-theme .contacts p {
+  color: #263036;
+}
+.main-theme .contact-link {
+  color: #1C2E8C;
+}
+.main-theme .hire-me {
+  margin-left: 40px;
+}
+.main-theme .languages {
+  margin: 35px 0 0 40px;
+}
+.main-theme .languages p {
+  color: #263036;
+}
+.main-theme .main-content {
+  background-color: #fff;
+}
+.main-theme .title {
+  color: #1E1E1E;
+  padding-bottom: 30px;
+  border-bottom: 5px solid #000;
+}
+.main-theme .summary-description {
+  color: #263036;
+  margin-top: 30px;
+}
+.main-theme .skills .list-items {
+  margin-top: 30px;
+}
+.main-theme .skills .list-items li {
+  color: #263036;
+}
+.main-theme .work .title {
+  margin-bottom: 30px;
+}
+.main-theme .work-description {
+  color: #000;
+}
+.main-theme .education-description {
+  color: #263036;
+  margin-top: 30px;
+}
+.main-theme .form label {
+  color: #6F7482;
+}
+.main-theme .form textarea {
+  background-color: #F8FAFC;
+}
+.main-theme .form select {
+  color: #3B4256;
+  background-color: #F8FAFC;
+}
+.main-theme .form input:focus,
+.main-theme .form textarea:focus,
+.main-theme .form select:focus {
+  outline: 1px solid #0048D9;
+}
+.main-theme .form input[type=email] {
+  background-color: #F8FAFC;
+  color: #3B4256;
+}
+.main-theme .form input::-moz-placeholder {
+  color: #B8BCCA;
+}
+.main-theme .form input::placeholder {
+  color: #B8BCCA;
+}
+.main-theme .form input[type=submit] {
+  background-color: #0048D9;
+  color: #fff;
+}
+.main-theme .form input[type=submit]:hover {
+  background-color: #002266;
+}
+.main-theme .form input:valid {
+  border: 1px solid #0E6245;
+}
+.main-theme .form input:invalid {
+  border: 1px solid #ED0131;
+}
+.main-theme .form .success {
+  color: #0E6245;
+}
+.main-theme .form .error {
+  color: #ED0131;
+}
+
+.my-theme .sidebar {
+  background-color: #585467;
+}
+.my-theme .name {
+  color: #1C2E8C;
+  margin: 0 0 35px 40px;
+}
+.my-theme .photo {
+  margin: 35px 0 50px 0;
+}
+.my-theme .sidebar .title {
+  color: #F3EFF5;
+  border-bottom: 6px solid #F3EFF5;
+}
+.my-theme .contacts {
+  margin-left: 40px;
+}
+.my-theme .sidebar-title {
+  color: #F3EFF5;
+}
+.my-theme .contact-title {
+  color: #F3EFF5;
+  margin-top: 35px;
+}
+.my-theme .contacts p {
+  color: #F3EFF5;
+}
+.my-theme .contact-link {
+  color: #1C2E8C;
+}
+.my-theme .hire-me {
+  margin-left: 40px;
+}
+.my-theme .languages {
+  margin: 35px 0 0 40px;
+}
+.my-theme .languages p {
+  color: #F3EFF5;
+}
+.my-theme .main-content {
+  background-color: #F3EFF5;
+}
+.my-theme .title {
+  color: #454955;
+  padding-bottom: 30px;
+  border-bottom: 5px solid #454955;
+}
+.my-theme .summary-description {
+  color: #454955;
+  margin-top: 30px;
+}
+.my-theme .skills .list-items {
+  margin-top: 30px;
+}
+.my-theme .skills .list-items li {
+  color: #454955;
+}
+.my-theme .work .title {
+  margin-bottom: 30px;
+}
+.my-theme .work-description {
+  color: #454955;
+}
+.my-theme .education-description {
+  color: #454955;
+  margin-top: 30px;
+}
+.my-theme .form label {
+  color: #6F7482;
+}
+.my-theme .form textarea {
+  background-color: #F8FAFC;
+}
+.my-theme .form select {
+  color: #3B4256;
+  background-color: #F8FAFC;
+}
+.my-theme .form input:focus,
+.my-theme .form textarea:focus,
+.my-theme .form select:focus {
+  outline: 1px solid #0048D9;
+}
+.my-theme .form input[type=email] {
+  background-color: #F8FAFC;
+  color: #3B4256;
+}
+.my-theme .form input::-moz-placeholder {
+  color: #B8BCCA;
+}
+.my-theme .form input::placeholder {
+  color: #B8BCCA;
+}
+.my-theme .form input[type=submit] {
+  background-color: #0048D9;
+  color: #F3EFF5;
+}
+.my-theme .form input[type=submit]:hover {
+  background-color: #002266;
+}
+.my-theme .form input:valid {
+  border: 1px solid #0E6245;
+}
+.my-theme .form input:invalid {
+  border: 1px solid #ED0131;
+}
+.my-theme .form .success {
+  color: #0E6245;
+}
+.my-theme .form .error {
+  color: #ED0131;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+.main {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation {
+  border-radius: 3px;
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+/* sidebar styles */
+.sidebar {
+  padding: 60px 0 60px 0;
+  width: 402px;
+  height: calc(100% - 120px);
+  z-index: 2;
+}
+.sidebar .title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 30px;
+  padding-bottom: 15px;
+  width: 289px;
+}
+.sidebar .name {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+}
+.sidebar .photo {
+  width: 385px;
+  height: 292px;
+  transition: transform 2s;
+}
+.sidebar .contact-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+}
+.sidebar .contact-link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+}
+.sidebar .contacts p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 10px;
+}
+.sidebar .hire-me {
+  font-size: 24px;
+}
+.sidebar .languages .title {
+  margin-bottom: 25px;
+}
+.sidebar .languages p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 15px;
+}
+
+/* main styles */
+.main-content {
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 60px 55px;
+  /* summary styles */
+  /* Skills styles */
+  /* work styles */
+  /* education styles */
+}
+.main-content .title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  width: 660px;
+}
+.main-content .summary {
+  margin-bottom: 50px;
+}
+.main-content .summary .summary-description {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+.main-content .skills {
+  width: 620px;
+  margin-bottom: 50px;
+}
+.main-content .skills .list-items {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content .skills .list-items ul {
+  width: 300px;
+}
+.main-content .skills .list-items li {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 20px;
+}
+.main-content .work {
+  margin-bottom: 50px;
+}
+.main-content .work .work-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 15px;
+}
+.main-content .education .education-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* FORM */
+.form {
+  width: 600px;
+  height: 600px;
+  padding: 20px;
+  position: fixed;
+  left: calc(50% - 320px);
+  top: calc(50% - 320px);
+}
+.form h1, .form h2, .form table {
+  margin-top: 10px;
+}
+.form input,
+.form select,
+.form textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  padding: 0 15px 0 15px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.form .contact-info table, .form .contact-info td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 10px 15px;
+}
+.form fieldset {
+  padding: 10px;
+}
+.form input[type=email] {
+  width: 460px;
+  height: 48px;
+  border-radius: 4px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+}
+.form input[type=email]:valid ~ .success, .form input[type=email]:invalid ~ .error {
+  display: block;
+}
+.form input[type=submit] {
+  cursor: pointer;
+  min-width: 92px;
+  height: 32px;
+  border-radius: 6px;
+  padding: 4px 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+}
+.form input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+}
+.form input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+}
+.form label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+}
+.form textarea {
+  min-width: 460px;
+  min-height: 139px;
+  border-radius: 4px;
+}
+.form select {
+  width: 460px;
+  height: 48px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  background: url(./img/mdi_arrow_drop_down.svg) no-repeat center right 0.75rem;
+  cursor: pointer;
+}
+.form .success, .form .error {
+  display: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    width: 385px;
+    flex-direction: column;
+  }
+  .main-content {
+    padding: 30px 25px;
+  }
+  .sidebar {
+    width: 385px;
+  }
+  .title {
+    width: 335px;
+  }
+  .skills {
+    width: 335px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .sidebar {
+    box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
+  }
+  .photo-scale {
+    transform: scale(1.75) translate(21.5%, 21.5%);
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 2s;
+  }
+  .work-description.previous {
+    opacity: 0.7;
+    transition: opacity 2s;
+  }
+  .work-description.previous:hover {
+    opacity: 1;
+    transition: opacity 2s;
+  }
+}
+@keyframes contentUp {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.sidebar {
+  animation: contentUp 1.5s linear;
+}
+
+.main-content {
+  animation: contentUp 2s linear;
+}
+
+.form {
+  animation: form2x 2s ease-in-out;
+}
+
+@keyframes form2x {
+  from {
+    transform: scale(2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=sass-style.css.map */

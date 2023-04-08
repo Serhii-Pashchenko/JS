@@ -4,55 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson 29</title>
+  <title>Lesson 30</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
+  <div class="m-container js-container"></div>
+
+  <!-- test engine -->
+  <script src="testengine/jasmine.js"></script>
+  <script src="testengine/jasmine-test-reporter.js"></script>
+  <script src="testengine/TestManager.js"></script>
+
+  <script src="./functionsForTests.js"></script>
+
+  <script src="./index.test.js"></script>
+
+  <!-- run our code -->
   <script>
-
-    // 1
-    function calculateAverage(arr) {
-      let sum = 0;
-      for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-      }
-
-      return sum / arr.length;
-    }
-
-    let numbers = [1, 2, 3, 4, 5];
-
-    let avg = calculateAverage(numbers);
-    console.log("The average is: " + avg); // має бути 3
-
-
-
-    // 2
-    function User(name, age) {
-      this.name = name;
-      this.age = age;
-    }
-
-    User.prototype.sayHello = function() {
-      return `Hi. My name is ${this.name} and I'm ${this.age} years old`;
-    }
-
-    const user = new User('Sherlock', 27);
-    console.log(user.sayHello()); // має вивести "Hi. My name is Sherlock and I'm 27 years old"
-
-
-
-    // 3
-    const calculator = function(init = 0) {
-      return function () {
-        return ++init;
-      }
-    }
-    
-    const c = calculator();
-    console.log(c()); // має вивести 1
-    console.log(c()); // має вивести 2
-
+      window.onload = function () {
+          window.initiateTest();
+      };
   </script>
 </body>
 </html>
