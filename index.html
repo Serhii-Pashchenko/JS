@@ -4,27 +4,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson 30</title>
-  <link rel="stylesheet" href="./css/styles.css">
+  <title>Lesson 31</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: sans-serif;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h2 {
+      text-align: center;
+      font-size: 40px;
+      line-height: 3;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="m-container js-container"></div>
+  <div class="container">
+    <h2>До нового року залишилось <span id="hours"></span></h2>
+    <h2>або <span id="months"></span></h2>
+  </div>
 
-  <!-- test engine -->
-  <script src="testengine/jasmine.js"></script>
-  <script src="testengine/jasmine-test-reporter.js"></script>
-  <script src="testengine/TestManager.js"></script>
-
-  <script src="./functionsForTests.js"></script>
-
-  <script src="./index.test.js"></script>
-
-  <!-- run our code -->
   <script>
-      window.onload = function () {
-          window.initiateTest();
-      };
+    const hours = document.getElementById('hours');
+    const months = document.getElementById('months');
+    
+
+    setInterval(() => {
+      const new_year = new Date(new Date().getFullYear() + 1, 0, 1);
+      const now = new Date();
+      const last_day_of_current_month = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+      hours.innerHTML = Math.floor((new_year - now) / 1000 / 60 / 60) + ' годин ' + (59 - now.getMinutes()) + ' хвилин ' + (59 - now.getSeconds()) + ' секунд';
+      months.innerHTML = (11 - now.getMonth()) + ' місяців ' + (last_day_of_current_month - now.getDate()) + ' днів ' + (24 - now.getHours()) + ' годин ' + (59 - now.getMinutes()) + ' хвилин ' + (59 - now.getSeconds()) + ' секунд';
+    }, 1000);
   </script>
+
 </body>
 </html>
